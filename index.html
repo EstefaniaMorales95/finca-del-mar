@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Restaurante Finca del Mar</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/estilos.css">
+
+  <!-- Cargar EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- Inicializar EmailJS -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Inicializar EmailJS con tu User ID
+      emailjs.init("service_o9tn1c9"); // ⚠️ Reemplaza con tu User ID real
+    });
+  </script>
+</head>
+
+<body>
+  <header class="Encabezado">
+    <div class="contenedor-navegacion">
+      <div class="contenido-navegacion contenedor">
+        <div class="logo">
+          <img data-src="assets/imagenes/logo1.png" alt="Logo Restaurante" class="logo-img">
+        </div>
+        <nav class="navegacion ocultar">
+          <a href="#inicio">Inicio</a>
+          <a href="#nosotros">Sobre nosotros</a>
+          <a href="#menu">Menú</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="hamburguesa">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+    <div class="contenido-header">
+      <div class="contenedor-encavezado">
+        <div class="texto-encabezado">
+          <h2>Bienvenido!</h2>
+        </div>
+        <video autoplay loop muted>
+          <source src="/assets/imagenes/videofincad.mov">
+        </video>
+      </div>
+    </div>
+  </header>
+
+
+
+  <div id="nosotros" class="contenedor-nosotros contenedor ">
+    <div id="inicio" class="texto-nosotros">
+      <h1 class="titulo">Restaurante Finca del Mar</h1>
+      <p>Ubicado en el emblemático Casco Antiguo de Ciudad de Panamá, Finca del Mar es un destino gastronómico que ha
+        deleitado a sus comensales durante 11 años con lo mejor de la cocina mediterránea. Con una terraza al aire libre
+        que ofrece una espectacular vista al mar, este restaurante combina sabores frescos, ambiente acogedor y una
+        carta de cócteles excepcionales.
+      </p>
+
+    </div>
+
+    <div class="imagenes-nosotros">
+
+      <div class="imagenes2">
+        <img data-src="assets/imagenes/sombrillas.jpeg" alt="sunset">
+        <img data-src="assets/imagenes/sombreros.jpeg" alt='sombreros'>
+      </div>
+    </div>
+  </div>
+  <section id="menu" class="menu contenedor">
+    <h2 class="texto-platillos">Menú Finca del Mar </h2>
+    <div class="botones-platillos">
+      <button class="todos  btn btn-verde">Todos</button>
+      <button class="langosta btn btn-verde">Langosta</button>
+      <button class="fuertes btn btn-verde">Fuertes</button>
+      <button class="ceviches btn btn-verde">Ceviches</button>
+      <button class="varios btn btn-verde">Varios</button>
+      <button class="postres btn btn-verde">Postres</button>
+    </div>
+
+    <div class="platillos">
+      <div class="platillo" data-platillo="langosta">
+        <img data-src="assets/imagenes/langosta1.5.jpg" alt="langosta">
+        <h2>Langosta al Ajillo 1.5 libras</h2>
+        <p>Langosta a la plancha en salsa de Ajillo con un acompañante.</p>
+        <div class="precio">B/39.00</div>
+        <div class="platillo" data-platillo="langosta">
+          <img data-src="assets/imagenes/langosta2.5.jpg" alt="langosta">
+          <h2>Langosta al Ajillo 2.5 libras</h2>
+          <p>Langosta a la plancha en salsa de Ajillo con un acompañante.</p>
+          <div class="precio">B/45.00</div>
+        </div>
+        <div class="platillo" data-platillo="langosta">
+          <img data-src="assets/pastalangosta.jpg" alt="langosta">
+          <h2>Spaghetti de langosta</h2>
+          <p>Spaghetti de langosta en salsa pomodoro.</p>
+          <div class="precio">B/45.00</div>
+        </div>
+        <div class="platillo" data-platillo="fuertes">
+          <img data-src="assets/imagenes/atun.jpg" alt="fuertes">
+          <h2>Tatataki de atun</h2>
+          <p>Atun a la plancha con un acompañante.</p>
+          <div class="precio">B/24.00</div>
+        </div>
+        <div class="platillo" data-platillo="fuertes">
+          <img data-src="assets/imagenes/filetederes.jpg" alt="fuertes">
+          <h2>Filete de Res</h2>
+          <p>Filete de res a la plancha con un acompañante.</p>
+          <div class="precio">B/30.00</div>
+        </div>
+        <div class="platillo" data-platillo="fuertes">
+          <img data-src="assets/imagenes/merluza.jpg" alt="fuertes">
+          <h2>Merluza a la plancha</h2>
+          <p>Merluza a la plancha en salsa de maracuya y romero con un acompañante.</p>
+          <div class="precio">B/27.00</div>
+        </div>
+        <div class="platillo" data-platillo="ceviches">
+          <img data-src="assets/imagenes/cevichemerluza.jpg" alt="ceviches">
+          <h2>Ceviche de merluza</h2>
+          <p>Ceviche de merluza estilo peruano acompañado de chips de platano.</p>
+          <div class="precio">B/17.00</div>
+        </div>
+        <div class="platillo" data-platillo="ceviches">
+          <img data-src="assets/imagenes/cevichemixto.jpg" alt="ceviches">
+          <h2>Ceviche mixto</h2>
+          <p>Ceviche de pescado y camaron estilo peruano acompañodo de chips de platano.</p>
+          <div class="precio">B/39.00</div>
+        </div>
+        <div class="platillo" data-platillo="ceviches">
+          <img data-src="assets/imagenes/ceviche.jpeg" alt="ceviches">
+          <h2>Ceviche de camaron</h2>
+          <p>Ceviche de camaron acompañado de chips de platano.</p>
+          <div class="precio">B/39.00</div>
+        </div>
+        <div class="platillo" data-platillo="varios">
+          <img data-src="assets/imagenes/hamburguesa.jpg" alt="varios">
+          <h2>Hamburguesa</h2>
+          <p>Hamburguesa clasica acompañada de papas fritas. </p>
+          <div class="precio">B/28.00</div>
+        </div>
+        <div class="platillo" data-platillo="varios">
+          <img data-src="assets/imagenes/dedosdepollo.jpg" alt="varios">
+          <h2>Dedos de pollo</h2>
+          <p>Pechuga de pollo en forma de dedos.</p>
+          <div class="precio">B/13.00</div>
+        </div>
+        <div class="platillo" data-platillo="varios">
+          <img data-src="assets/imagenes/arañitas.jpg" alt="varios">
+          <h2>Arañitas apanadas</h2>
+          <p>Calamar empanisado y frito.</p>
+          <div class="precio">B/39.00</div>
+        </div>
+        <div class="platillo" data-platillo="postres">
+          <img data-src="assets/imagenes/volcan.jpg" alt="postres">
+          <h2>Volcan de chocolate</h2>
+          <p></p>
+          <div class="precio">B/12.00</div>
+        </div>
+        <div class="platillo" data-platillo="postres">
+          <img data-src="assets/imagenes/fresa.jpg" alt="postres">
+          <h2>Cheesecake de fresa</h2>
+          <p></p>
+          <div class="precio">B/9.00</div>
+        </div>
+        <div class="platillo" data-platillo="postres">
+          <img data-src="assets/imagenes/tartalimon.jpg" alt="postres">
+          <h2>Tarta de limón</h2>
+          <p></p>
+          <div class="precio">B/9.00</div>
+        </div>
+
+
+
+      </div>
+  </section>
+
+  <div class="separador">
+    <div class="contenido-separador contenedor">
+
+    </div>
+  </div>
+
+  <div class="formulario-contacto contenedor">
+    <div class="informacion-contacto">
+      <h3>Contactanos!</h3>
+    </div>
+
+    <form id="contacto" class="formulario">
+      <div class="input-formulario">
+        <label for="nombre">Nombre</label>
+        <input type="text" placeholder="Pedro" id="nombre" name="nombre" required>
+      </div>
+      <div class="input-formulario">
+        <label for="apellidos">Apellido</label>
+        <input type="text" placeholder="Gómez" id="apellidos" name="apellidos" required>
+      </div>
+      <div class="input-formulario">
+        <label for="correo">Correo</label>
+        <input type="email" placeholder="ejemplo@ejemplo.com" id="correo" name="correo" required>
+      </div>
+      <div class="input-formulario">
+        <label for="telefono">Teléfono</label>
+        <input type="tel" placeholder="+507 123 4567" id="telefono" name="telefono" required>
+      </div>
+      <div class="input-formulario">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      </div>
+      <div class="btn-formulario">
+        <input type="submit" class="btn btn-verde" value="Enviar">
+      </div>
+    </form>
+  </div>
+
+
+  <div class="pie-pagina ">
+    <div class="contenedor-piepagina contenedor">
+      <div class="info">
+        <h3>Dirección</h3>
+        <p><i class="fas fa-map-marker-alt"></i> 8-66 Calle primera casco antiguo al lado de la embajada de Francia</p>
+      </div>
+
+      <div class="info">
+        <h3>Horarios</h3>
+        <p>Lunes - Domingo 10:00am - 11:00pm</p>
+        <div class="info">
+          <h3>Reservas</h3>
+          <p> <a href="mailto:fincadelmar@outlook.com">
+              <i class="fas fa-envelope"></i> fincadelmar@outlook.com
+            </a></p>
+          <p>
+            <a href="tel:+5072282967">
+              <i class="fas fa-phone-alt"></i> +507 228-2967
+            </a>
+          </p>
+        </div>
+        <div class="redes-sociales redes-pie">
+          <div class="redes-sociales">
+            <a href="https://www.instagram.com/finca.delmar?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <footer class="footer">
+      <p>Todos los derechos reservados &copy; 2024 Restaurante Finca del Mar</p>
+    </footer>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

@@ -204,6 +204,11 @@ img {
 	height: 0.5rem;
 	margin-bottom: 0.5rem;
 }
+.logo-img {
+	width: 33rem; /* Cambia el valor a tu preferencia */
+	height: auto;
+	margin-top: -30px;
+}
 
 /*video*/
 .contenido-header {
@@ -495,6 +500,8 @@ video {
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	font-size: 1.4rem;
+	z-index: 1;
+	pointer-events: auto;
 }
 
 .input-formulario textarea {

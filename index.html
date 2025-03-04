@@ -13,8 +13,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/estilos.css">
 
   <!-- Cargar EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -103,7 +103,7 @@
           <div class="precio">B/45.00</div>
         </div>
         <div class="platillo" data-platillo="langosta">
-          <img data-src="assets/pastalangosta.jpg" alt="langosta">
+          <img data-src="assets/imagenes/pastalangosta.jpg" alt="langosta">
           <h2>Spaghetti de langosta</h2>
           <p>Spaghetti de langosta en salsa pomodoro.</p>
           <div class="precio">B/45.00</div>
@@ -197,22 +197,18 @@
       <h3>Contactanos!</h3>
     </div>
 
-    <form id="contacto" class="formulario">
+    <form id="contacto" class="formulario" action="https://formspree.io/f/xdkaqrzo" method="POST">
       <div class="input-formulario">
         <label for="nombre">Nombre</label>
-        <input type="text" placeholder="Pedro" id="nombre" name="nombre" required>
+        <input type="text" placeholder="Nombre" id="nombre" name="nombre" required>
       </div>
       <div class="input-formulario">
         <label for="apellidos">Apellido</label>
-        <input type="text" placeholder="Gómez" id="apellidos" name="apellidos" required>
+        <input type="text" placeholder="Apellido" id="apellidos" name="apellidos" required>
       </div>
       <div class="input-formulario">
         <label for="correo">Correo</label>
         <input type="email" placeholder="ejemplo@ejemplo.com" id="correo" name="correo" required>
-      </div>
-      <div class="input-formulario">
-        <label for="telefono">Teléfono</label>
-        <input type="tel" placeholder="+507 123 4567" id="telefono" name="telefono" required>
       </div>
       <div class="input-formulario">
         <label for="mensaje">Mensaje</label>

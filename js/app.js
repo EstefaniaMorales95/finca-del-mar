@@ -150,43 +150,29 @@ const limpiarHtml = (contenedor) => {
 };
 
 // Inicializa EmailJS con tu User ID
-emailjs.init('service_o9tn1c9');
+document.addEventListener('DOMContentLoaded', function () {
+	const form = document.getElementById('contact-form');
 
-document
-	.getElementById('contacto')
-	.addEventListener('submit', function (event) {
-		event.preventDefault();
+	if (form) {
+		form.addEventListener('submit', function (event) {
+			event.preventDefault();
+			const formData = new FormData(form);
 
-		// 🔹 Usamos tu Service ID y Template ID
-		emailjs.sendForm('servicio_o9tn1c9', 'template_x72ulti', this).then(
-			function () {
-				alert('¡Mensaje enviado con éxito! Te responderemos pronto.');
-				document.getElementById('contacto').reset();
-			},
-			function (error) {
-				alert('Hubo un error: ' + JSON.stringify(error));
-			},
-		);
-	});
-
-document
-	.getElementById('contacto')
-	.addEventListener('submit', function (event) {
-		event.preventDefault();
-		const nombre = document.getElementById('nombre').value;
-		const apellidos = document.getElementById('apellidos').value;
-		const correo = document.getElementById('correo').value;
-		const telefono = document.getElementById('telefono').value;
-		const mensaje = document.getElementById('mensaje').value;
-
-		if (nombre && apellidos && correo && telefono && mensaje) {
-			alert(
-				'Gracias, ' + nombre + '! Tu mensaje ha sido enviado correctamente.',
-			);
-			document.getElementById('contacto').reset();
-		} else {
-			alert(
-				'Por favor completa todos los campos antes de enviar el formulario.',
-			);
-		}
-	});
+			fetch(form.action, {
+				method: 'POST',
+				body: formData,
+			})
+				.then((response) => {
+					if (response.ok) {
+						form.reset();
+						alert('¡Formulario enviado con éxito!');
+					} else {
+						alert('Hubo un error al enviar el formulario.');
+					}
+				})
+				.catch((error) => {
+					alert('Error al enviar el formulario. Intenta nuevamente.');
+				});
+		});
+	}
+});
